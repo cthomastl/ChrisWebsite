@@ -1,5 +1,11 @@
+
 .App {
   text-align: center;
+  animation: fadein 2s;
+  -moz-animation: fadein 2s; /* Firefox */
+  -webkit-animation: fadein 2s; /* Safari and Chrome */
+  -o-animation: fadein 2s; /* Opera */
+
 }
 
 .App-logo {
@@ -35,4 +41,33 @@
   to {
     transform: rotate(360deg);
   }
+}
+.wrapper {
+  height: 20vh;
+  /*This part is important for centering*/
+  display: grid;
+  place-items: center;
+}
+.typing-demo {
+  width: 22ch;
+  animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 5px solid;
+  font-family: monospace;
+  font-size: 20px;
+}
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
+.div {
+  width: 150px
 }
